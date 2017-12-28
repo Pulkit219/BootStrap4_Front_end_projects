@@ -1,0 +1,18 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+h6.card-subtitle {
+  font-weight: 800;
+  color: #2be2c3; }
+
+i.fa-heart-o {
+  color: #2be2c3;
+  font-weight: 800; }
+
+.card-header, .card-footer {
+  background-color: white; }
+
+.amount {
+  font-weight: 800;
+  color: purple; }

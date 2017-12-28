@@ -1,0 +1,35 @@
+body{
+  margin: 0px;
+  padding:0px;
+}
+
+$margin-top:3.5rem;
+$greenish-font-color:#2be2c3;
+$fontWeight:800;
+$amtColor:purple;
+
+// #main{
+//   margin-top: $margin-top;
+// }
+
+// .map{
+//   min-height: 1080px;
+//   min-width: 800px;
+// }
+
+h6.card-subtitle{
+  font-weight: $fontWeight;
+  color: $greenish-font-color;
+}
+i.fa-heart-o{
+  color: $greenish-font-color;
+  font-weight: $fontWeight;
+}
+
+.card-header,.card-footer{
+  background-color: white;
+}
+.amount{
+  font-weight: $fontWeight;
+  color: $amtColor;
+}
