@@ -1,6 +1,7 @@
 body {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  background-color: rgba(128, 128, 128, 0.15); }
 
 h6.card-subtitle {
   font-weight: 800;
@@ -15,4 +16,7 @@ i.fa-heart-o {
 
 .amount {
   font-weight: 800;
+  color: purple; }
+
+.footer-text-address {
   color: purple; }

@@ -1,16 +1,16 @@
 body{
   margin: 0px;
   padding:0px;
+  background-color: rgba(128, 128, 128, 0.15);
 }
+
 
 $margin-top:3.5rem;
 $greenish-font-color:#2be2c3;
 $fontWeight:800;
 $amtColor:purple;
 
-// #main{
-//   margin-top: $margin-top;
-// }
+
 
 // .map{
 //   min-height: 1080px;
@@ -31,5 +31,8 @@ i.fa-heart-o{
 }
 .amount{
   font-weight: $fontWeight;
+  color: $amtColor;
+}
+.footer-text-address{
   color: $amtColor;
 }
