@@ -20,3 +20,17 @@ i.fa-heart-o {
 
 .footer-text-address {
   color: purple; }
+
+div.card-footer {
+  padding: 0px; }
+
+.iconn {
+  border-right: 1px solid #e7dddd;
+  padding: 1.5px; }
+
+div.row, .card {
+  margin-bottom: 1.1rem; }
+
+div.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
