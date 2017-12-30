@@ -19,8 +19,7 @@
         <div class="col-md-1 vertical-icon p-0">
           <div class="icon-bar d-none d-m-block d-lg-block">
             <a class="" href="#"><i class="fa"><p class="h4">nobbas</p></i></a>
-            <a href="#"><i class="fa fa-search"></i><p class="h6" onclick="openNav()">Search</p></a>
-            <!--VERTICAL SEARCH BAR SECTION -->
+            <a href="#" onclick="openNav()"><i class="fa fa-search"></i><p class="h6" >Search</p></a>
             <a href="#"><i class="fa fa-retweet" aria-hidden="true"></i><p class="h6">Collaborate</p></a>
             <a href="#"><i class="fa fa-heart" aria-hidden="true"></i><p class="h6">Favourites</p></a>
             <a href="#" ><i class="fa fa-globe"></i></a>
@@ -221,10 +220,28 @@
         </div>
       </div>
     </div>
+    <!--VERTICAL SEARCH BAR SECTION -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
   </section>
+
 
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+  </script>
 </body>
 </html>
