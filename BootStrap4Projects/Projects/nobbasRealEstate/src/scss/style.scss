@@ -10,10 +10,6 @@ $greenish-font-color:#2be2c3;
 $fontWeight:800;
 $amtColor:purple;
 
-// .map{
-//   min-height: 1080px;
-//   min-width: 800px;
-// }
 
 h6.card-subtitle{
   font-weight: $fontWeight;
@@ -35,6 +31,9 @@ i.fa-heart-o{
   color: $amtColor;
 }
 
+.map{
+  height: 100%;
+}
 div.card-footer{
   padding:0px;
 }
@@ -43,7 +42,7 @@ div.card-footer{
   padding: 1.5px;
 }
 
-div.row, .card{
+ .card{
   margin-bottom: 1.1rem;
 }
 
@@ -51,4 +50,34 @@ div.row, .card{
 div.card{
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+//STYLING ICON BAR VERTICAL
+.icon-bar {
+    width: 7.0rem;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: $greenish-font-color;
+    font-size: 1.75rem;
+    border-bottom: 1px solid #e7dddd;
+    .fa-globe{
+      padding-top: 30rem;
+    }
+}
+
+.icon-bar a:hover {
+    background-color: purple;
+}
+
+.active {
+    background-color: #4CAF50 !important;
 }
