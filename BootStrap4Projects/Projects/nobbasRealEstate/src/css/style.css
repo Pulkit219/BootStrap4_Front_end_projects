@@ -40,14 +40,14 @@ div.card {
 
 .icon-bar {
   width: 7.0rem;
-  height: 100%;
   background-color: #fff;
   border-radius: 15px; }
 
 .icon-bar a {
   display: block;
   text-align: center;
-  padding: 16px;
+  text-decoration: none;
+  padding: 1.0rem;
   transition: all 0.3s ease;
   color: #2be2c3;
   font-size: 1.75rem;
@@ -56,7 +56,8 @@ div.card {
     padding-top: 30rem; }
 
 .icon-bar a:hover {
-  background-color: purple; }
+  background-color: purple;
+  border-radius: 15px; }
 
 .active {
   background-color: #4CAF50 !important; }
