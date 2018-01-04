@@ -2,13 +2,16 @@ body{
   margin: 0px;
   padding:0px;
   background-color: rgba(128, 128, 128, 0.15);
+  font-family: "Lato", 'Arial',sans-serif;
+  box-sizing: border-box;
 }
 
 
 $margin-top:3.5rem;
-$greenish-font-color:#2be2c3;
+$greenish-font-color:#0eb195;
 $fontWeight:800;
 $amtColor:purple;
+$greyishColor:#8c9997;
 
 
 h6.card-subtitle{
@@ -78,7 +81,7 @@ div.card{
     text-decoration: none;
     padding: 1.0rem;
     transition: all 0.3s ease;
-    color: $greenish-font-color;
+    color: $greyishColor;
     font-size: 1.75rem;
     border-bottom: 1px solid #e7dddd;
     .fa-globe{
@@ -139,7 +142,7 @@ div.card{
 
 
 .sidenav{
-  select.form-control,input{
+  select.form-control,input,button{
     border-radius:50px;
     width: 15.0rem;
     height: 3.0rem;
@@ -153,4 +156,8 @@ div.card{
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+input:placeholder-shown {
+    font-weight: bold;
 }

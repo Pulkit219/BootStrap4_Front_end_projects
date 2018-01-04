@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/rangeslider.css">
 </head>
 <body>
 
@@ -19,7 +20,7 @@
         <div class="col-md-1 vertical-icon p-0">
           <div class="icon-bar d-none d-m-block d-lg-block">
             <a class="" href="#"><i class="fa"><p class="h4">nobbas</p></i></a>
-            <a href="#" onclick="openNav()"><i class="fa fa-search"></i><p class="h6" >Search</p></a>
+            <a href="#" onclick="openNav()"><i class="fa fa-search" style="color:#0eb195;"></i><p class="h6" >Search</p></a>
             <a href="#"><i class="fa fa-retweet" aria-hidden="true"></i><p class="h6">Collaborate</p></a>
             <a href="#"><i class="fa fa-heart" aria-hidden="true"></i><p class="h6">Favourites</p></a>
             <a href="#" ><i class="fa fa-globe"></i></a>
@@ -228,26 +229,66 @@
     <div id="mySidenav" class="sidenav text-center">
       <div class="container">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <p class="h2 text-muted">Search</p>
-        <p class="text-muted">I am looking to</p>
-        <select class="form-control my-4">
-          <option>Buy</option>
-        </select>
-        <input style="font-family: 'FontAwesome', Helvetica;" type="text" id="username" class="form-control my-2" placeholder="&#xf02e; City, zip or address">
-        <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
-          <option>&#xf015; Property type</option>
-        </select>
-        <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
-          <option value=""hidden>&#xf236; &nbsp;&nbsp;1+</option>
-        </select>
-        <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
-          <option value=""hidden>&#xf2cd; &nbsp;&nbsp;1+</option>
-        </select>
-        <!--
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a> -->
+          <form class="text-center">
+              <p class="h2 text-muted">Search</p>
+              <p style="font-weight:bold;">I am looking to</p>
+              <div class="form-group">
+                <select class="form-control my-4">
+                  <option>Buy</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input style="font-family: 'FontAwesome', Helvetica;" type="text"  class="form-control my-2" placeholder="&#xf02e; &nbsp;&nbsp; City, zip or address">
+              </div>
+              <div class="form-group">
+                <p style="font-weight:bold;">Desired price</p>
+                <input
+                    type="range"
+                    min="100"
+                    max="1000"
+                    step="2"
+                    value="300"
+                >
+              </div>
+              <div class="form-group">
+                <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
+                  <option value="" hidden>&#xf015; &nbsp;&nbsp;Property type</option>
+                  <option>Condo</option>
+                  <option>House</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
+                  <option value="" hidden>&#xf236; &nbsp;&nbsp;1+</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select class="form-control my-4" style="font-family: 'FontAwesome', Helvetica;">
+                  <option value="" hidden>&#xf2cd; &nbsp;&nbsp;1+</option>
+                  <option>1</option>
+                  <option>2</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="" style="font-weight:bold;">Square footage</label>
+                <div class="d-flex">
+                  <input style="width:50%;" type="text" class="form-control" placeholder="Min"><input style="width:50%;" type="text" class="form-control" placeholder="Max">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" style="font-weight:bold;">Year built</label>
+                <div class="d-flex">
+                  <input style="width:50%;" type="text" class="form-control" placeholder="Min"><input style="width:50%;" type="text" class="form-control" placeholder="Max">
+                </div>
+              </div>
+              <div class="form-group">
+                <input style="font-family: 'FontAwesome', Helvetica;" type="text" class="form-control my-2" placeholder="Keywords, garage, pool ...">
+              </div>
+              <button type="button" class="btn  btn-lg btn-block text-white" style="background-color:#0eb195;">Save Search</button>
+              <button type="submit" class="btn  btn-lg btn-block text-white" style="background-color:purple;">SEARCH</button>
+         </form>
       </div>
     </div>
   </section>
@@ -256,6 +297,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/rangeslider.min.js"></script>
   <script type="text/javascript">
         function openNav() {
         document.getElementById("mySidenav").style.width = "300px";
@@ -264,6 +306,41 @@
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
       }
+
+
+      $('input[type="range"]').rangeslider();
+
+
+
+  // Update all rangeslider instances for all
+  // e.g. $('input[type="range"]') elements.
+  // Usefull if you changed some attributes e.g. `min` or `max` etc.
+  $('input[type="range"]').rangeslider('update', true);
+  $('input[type="range"]').rangeslider({
+
+     // Feature detection the default is `true`.
+     // Set this to `false` if you want to use
+     // the polyfill also in Browsers which support
+     // the native <input type="range"> element.
+     polyfill: true,
+
+     // Default CSS classes
+     rangeClass: 'rangeslider',
+     disabledClass: 'rangeslider--disabled',
+     horizontalClass: 'rangeslider--horizontal',
+     verticalClass: 'rangeslider--vertical',
+     fillClass: 'rangeslider__fill',
+     handleClass: 'rangeslider__handle',
+
+     // Callback function
+     onInit: function() {},
+
+     // Callback function
+     onSlide: function(position, value) {},
+
+     // Callback function
+     onSlideEnd: function(position, value) {}
+ });
   </script>
 </body>
 </html>
