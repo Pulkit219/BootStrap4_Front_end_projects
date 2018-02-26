@@ -7,9 +7,6 @@
   height: 100%;
   border-radius: 10px; }
 
-#main-header .d-flex div {
-  border-radius: 10px; }
-
 #main-header .port-item {
   width: 30%; }
   #main-header .port-item .fa {
@@ -17,6 +14,9 @@
   #main-header .port-item:hover {
     opacity: 0.8;
     cursor: pointer; }
+
+footer, div {
+  border-radius: 10px; }
 
 @media (min-width: 1199px) {
   .port-item {
